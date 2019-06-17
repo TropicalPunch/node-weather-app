@@ -1,0 +1,79 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.mainContent{
+  flex-grow: 1;
+
+}
+
+footer{
+  margin-top: 10px;
+  color:rgb(66, 76, 77);
+  border-top: 1px solid grey;
+  
+  
+}
+
+h1{
+    color: blue;
+
+}
+
+h2{
+    color: rgb(19, 22, 19);
+
+}
+
+.aboutPhoto{
+    width: 250px;
+}
+
+/* NAVBAR
+Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+   
+    color:rgb(67, 148, 214) ;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgb(67, 148, 214);
+    color: white;
+  }
+
+  input{
+   border: 1px solid #cccccc;
+   padding: 8px; 
+  }
+
+  button{
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background: rgb(67, 148, 214) ;
+    color: white;
+    padding: 8px; 
+  }
