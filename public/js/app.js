@@ -53,6 +53,9 @@ response.json().then((data)=>{
         
         console.log(data.location)
         console.log(data.forecast)
+        
+
+        
     }
 })
 })
