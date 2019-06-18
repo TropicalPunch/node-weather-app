@@ -41,7 +41,7 @@ messageTwo.textContent=''
 console.log("submitting")
 console.log(search.value)
 
-fetch(`http://localhost:3000/weather?address=${userLocation}`).then((response)=>{
+fetch(`/weather?address=${userLocation}`).then((response)=>{
 response.json().then((data)=>{
     if(data.error){
         messageOne.textContent=`something went wrong, ${data.error}`

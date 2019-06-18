@@ -17,6 +17,9 @@ const forecastcode = require('./utills/forecastcode')
 const app = express()
 
 
+//in order to deploy on heroku:
+const port= process.env.PORT || 3000
+
 //////////define paths for express config:
 //connect to index.html via browser loaclhost:3000/ xyz.html (in public folder)
 const publicDirPath = path.join(__dirname,'../public')
@@ -130,8 +133,8 @@ app.get('*',(req,res)=>{
 
 
 //deploy with listen method:
-app.listen(3000,()=>{//3000 is dev port num 80 is for production
-    console.log('server is running')
+app.listen(port,()=>{//3000 is dev port num 80 is for production
+    console.log('server is running on 3000 or hirokus port:'+port)
 })
 
 // app.get('',(req,res)=>{
