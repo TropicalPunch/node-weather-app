@@ -15,6 +15,8 @@ const forecastcode = (lat,long , callback)=>{
         }else if(body.error){
             callback('unable to find location',undefined)
         }else{
+            //full forecast daily data:
+            console.log(body.daily.data[0])
        
        callback(undefined,
         {

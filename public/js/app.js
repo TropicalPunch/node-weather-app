@@ -28,6 +28,9 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 //messageTwo.textContent='Forecast:'
 
+const messageThree = document.querySelector('#message-3')
+const messageFour = document.querySelector('#message-4')
+
 //addEventListener(argument1, argument2)
 //argument1- a string with the name of the event we want to connect to
 //argument2- is a callback function which will run each time we click the submit button
@@ -38,6 +41,8 @@ const userLocation = search.value
 //lets show a loding masage after the user clicked search
 messageOne.textContent="loading..."
 messageTwo.textContent='' 
+messageThree.textContent='' 
+messageFour.textContent='' 
 console.log("submitting")
 console.log(search.value)
 
@@ -46,14 +51,17 @@ response.json().then((data)=>{
     if(data.error){
         messageOne.textContent=`something went wrong, ${data.error}`
         messageTwo.textContent=''
+        messageThree.textContent='' 
+        messageFour.textContent='' 
         console.log(data.error) 
     }else{
         messageOne.textContent=`Weather's location:${data.location}`
-        messageTwo.textContent=`full forecast: ${JSON.stringify(data.forecast)}`
-        
+        messageTwo.textContent=`full forecast: ${JSON.stringify(data.forecast.summary)}`
+        messageThree.textContent="temperature: "+JSON.stringify(data.forecast.temperature)+"°C" 
+        messageFour.textContent="wind speed: "+JSON.stringify(data.forecast.windSpeed)+" Km/hr"
         console.log(data.location)
         console.log(data.forecast)
-        console.log(data.forecast.timeZone)
+        
         
 
         
