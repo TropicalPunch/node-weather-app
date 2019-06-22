@@ -1,3 +1,4 @@
+//
 //console.log('client side app.js')
 
 //lets use fetch func to get data dfrom the specified url
