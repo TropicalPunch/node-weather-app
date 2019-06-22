@@ -135,7 +135,7 @@ app.get('*',(req,res)=>{
 
 //deploy with listen method:
 app.listen(port,()=>{//3000 is dev port num 80 is for production
-    console.log('server is running on 3000 or hirokus port:'+port)
+    console.log('server is running on 3000 or hirokus port:' + port)
 })
 
 // app.get('',(req,res)=>{
